@@ -1,0 +1,8 @@
+version: '3'
+services:
+  web:
+    image: jboss/wildfly:10.1.0.Final
+    volumes:
+      - ./target/got-questions-1.0-SNAPSHOT.war:/opt/jboss/wildfly/standalone/deployments/got-questions.war
+    ports:
+      - 8080:8080
